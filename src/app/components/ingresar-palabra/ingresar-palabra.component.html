@@ -1,0 +1,28 @@
+<div style="max-width: 35rem;">
+  <img [src]="imagen[idx]" class="card-img-top" height="200px" >
+
+  <div class="card-body" style="text-align: center;">
+    <h3 class="card-title">{{arrCoincidencias.join('  ') | json}}</h3>
+  </div>
+</div>
+
+  <form>
+    <div *ngIf="input">
+        <label>Ingresa una letra...</label>
+        <br>
+        <input type="text" maxlength="1" [(ngModel)]="letra" [ngModelOptions]="{standalone: true}"  (keyup)="revisarPalabra()"/>
+        <br><br>
+    </div>
+
+      <div *ngIf="juegoTerminado" class="alert alert-danger" role="alert">
+        ¡¡¡Perdiste!!! - La palabra era: "{{palabraAdivinar}}"
+      </div>
+      <div *ngIf="juegoGanado" class="alert alert-info" role="alert">
+        ¡¡¡Ganaste!!! - Felicidades, la palabra era: "{{palabraAdivinar}}"
+      </div>
+
+    <label>
+      Ya ingresaste {{intentos.join(', ') | json}}
+    </label>
+  </form>
+

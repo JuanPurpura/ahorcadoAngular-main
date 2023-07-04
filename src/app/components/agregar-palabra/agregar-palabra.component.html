@@ -1,0 +1,29 @@
+<h4>Agrega Palabras Nuevas</h4>
+
+<form>
+<input type="text" [(ngModel)]="palabraNueva" [ngModelOptions]="{standalone: true}"  />
+<br><br>
+<button (click)="AgregarPalabra()" type="button" class="btn btn-primary me-2" > Agregar</button>
+</form>
+
+<br><br>
+<div *ngIf="alertOk" class="alert alert-success" role="alert">
+  Palabra Agregada!
+</div>
+
+<div *ngIf="alertErr" class="alert alert-danger" role="alert">
+  Ups!.. Ocurrió un error!
+</div>
+
+<div *ngIf="alertErr2" class="alert alert-danger" role="alert">
+  Solo puedes ingresar letras minúsculas.
+</div>
+
+<label>
+  Palabras disponibles en la Base de Datos
+  <p>
+    "{{ getPalabrasSeparadas() }}"
+  </p>
+  
+  
+</label>

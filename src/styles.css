@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+html, body{
+    display: table;
+    color: white !important;
+    width:100vw;
+    height:100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fondoGrape{
+    background-color: #52465E !important;
+}
+
+.tituloJuego{
+    text-align: center;
+    margin: 5px 0px;
+    color: #ffffff;
+    /*font-family: fantasy;*/
+}
+
+.formularioIngresarPal{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px !important;
+    border-radius: 30px;
+}
